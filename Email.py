@@ -72,7 +72,7 @@ def enviarEmail(destinatario):
             mail.send(msg)
 
 # FUNÇÃO QUE ENVIA UM ARRAY DE DESTINATÁRIO
-lista_emails = ['thomas.nogueira@hotmail.com']
+lista_emails = ['EMAIL DESTINATÁRIO', 'EMAIL DESTINATÁRIO']
 #'joao.dvlp@gmail.com','joao.victor@omnicontract.kinghost.net', 
 for email in lista_emails:
     enviarEmail(email)
