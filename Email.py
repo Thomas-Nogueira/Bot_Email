@@ -59,7 +59,7 @@ def sendEmail(recipient):
         <table align="center" border="0" cellspacing="0" width="300">
             <tr>
                 <td align="center">   
-                    <img src="https://a-static.mlcdn.com.br/618x463/quadro-decorativo-canvas-p-salas-quartos-escritorios-paisagem-por-do-sol-i-incasa-design/incasadesign/cv0093pab/e15259fcdb2c77531ccea6d5e799ef5c.jpg" alt= "Boas Festas">
+                    <img src="https://static.significados.com.br/foto/paisagem-natural-significados.jpg" alt= "Boas Festas">
                 </td>
             </tr>
 
