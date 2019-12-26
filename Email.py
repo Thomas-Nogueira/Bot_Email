@@ -1,25 +1,26 @@
+tradutor
 from flask import Flask
 from flask_mail import Mail, Message
 import csv
 import os
 app = Flask(__name__)
 
-def enviarEmail(destinatario):
+def sendEmail(recipient):
     mail_settings = {
-    "MAIL_SERVER": 'smtp.gmail.com', 
-        "MAIL_USE_TLS": False, #Transport Layer Security
-        "MAIL_USE_SSL": True,  #Secure Sockets Layer
-        "MAIL_PORT": 465,        #For using SSL
-        "MAIL_USERNAME": 'EMAIL',
-        "MAIL_PASSWORD": 'SENHA DO EMAIL'
+    "MAIL_SERVER": 'smtp.gmail.com',      #Email server
+        "MAIL_USE_TLS": False,            #Transport Layer Security
+        "MAIL_USE_SSL": True,             #Secure Sockets Layer
+        "MAIL_PORT": 465,                 #For using SSL
+        "MAIL_USERNAME": 'EMAIL',         #Location for entering sender email
+        "MAIL_PASSWORD": 'SENHA DO EMAIL' #Location to enter sender email password
     }
     app.config.update(mail_settings)
     mail = Mail(app)
 
     if __name__ == '__main__':
         with app.app_context():
-            msg = Message(sender=app.config.get("MAIL_USERNAME"),recipients=[destinatario])
-            msg.subject = " TÍTULO DA MENSAGEM "
+            msg = Message(sender=app.config.get("MAIL_USERNAME"),recipients=[recipient])
+            msg.subject = " MESSAGE TITLE "
             msg.html =  """   
             
     <!DOCTYPE html>
@@ -71,19 +72,24 @@ def enviarEmail(destinatario):
     """
             mail.send(msg)
 
-# FUNÇÃO QUE ENVIA UM ARRAY DE DESTINATÁRIO
-lista_emails = ['EMAIL DESTINATÁRIO', 'EMAIL DESTINATÁRIO']
-#'joao.dvlp@gmail.com','joao.victor@omnicontract.kinghost.net', 
-for email in lista_emails:
-    enviarEmail(email)
+# FOR EMAILS LIMITED SHIPPING USE THE BELOW FUNCTION.
+#                       \|/             
 
-# CARREGA OS DADOS DO ARQUIVO CSV
-# arquivo = open('emails_crn_enviados.csv')
+# STORE AND LIST ARRAY OF RECIPIENTS
+list_emails = ['EMAIL RECIPIENT', 'EMAIL RECIPIENT']
 
-# lista_emails = csv.reader(arquivo)
+for email in list_emails:
+    sendEmail(email)
 
-# for destinatario in lista_emails:
-#    enviarEmail(destinatario[0])
-#    print(destinatario)
+# FOR EMAILS UNLIMITED SHIPPING USE THE FUNCTION BELOW. 
+#                       \|/ 
+# UNCOMPRESSED FUNCTION.
+
+# LOAD CSV FILE DATA AND READ ALL EMAILS THAT ARE CONTAINED IN THE FILE FOR AUTOMATED SENDING MESSAGES.
+# file = open('file.csv')
+# list_emails = csv.reader(file)
+# for recipients in list_emails:
+#    sendEmail(recipients[0])
+#    print(recipients)
 
         	
