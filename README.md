@@ -52,5 +52,5 @@ for recipients in list_emails:
         print(recipients)
 ```
 
-
+#### The above example allows the sending of messages with images and texts. If you want something more detailed use the article [How to Send Emails with Python](https://medium.com/@sagarsharma4244/how-to-send-emails-using-python-4293dacc57d9).
 
