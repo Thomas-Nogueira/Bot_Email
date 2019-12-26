@@ -59,7 +59,7 @@ def sendEmail(recipient):
         <table align="center" border="0" cellspacing="0" width="300">
             <tr>
                 <td align="center">   
-                    <img src="https://static.significados.com.br/foto/paisagem-natural-significados.jpg" alt= "Boas Festas">
+                    <img src="https://static.significados.com.br/foto/paisagem-natural-significados.jpg" alt= "landscape">
                 </td>
             </tr>
 
