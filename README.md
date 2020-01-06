@@ -1,6 +1,6 @@
 # Bot for Email
 
-According to [Wikipedia](https://pt.wikipedia.org/wiki/Flask_(framework_web)), **Flask** is a small web framework written in Python based on the WSGI Werkzeug library and the Jinja2 library. Flask is available under the terms of the BSD License.
+According to [Wikipedia](https://pt.wikipedia.org/wiki/Flask_(framework_web)), **Flask** is a small web framework written in Python based on the WSGI Werkzeug library and the Jinja2 library. The **Flask** is available under the terms of the BSD License.
 
 To run this example you need to install [Flask framework](https://flask-ptbr.readthedocs.io/en/latest/installation.html).
 ```
